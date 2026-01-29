@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onclick="startPlaylist()"> 
+    <div id="audio-container">
+        <audio id="track1"><source src="m1.ogg" type="audio/ogg"></audio>
+        <audio id="track2"><source src="m2.ogg" type="audio/ogg"></audio>
+        <audio id="track3"><source src="m3.ogg" type="audio/ogg"></audio>
+    </div>
+
+    <div id="main-content" class="phone-container hidden">
+        <div id="screen1" class="screen active">
+            <div class="card glass">
+                <img src="pic1.jpeg" alt="loading" class="loader-img floating">
+                <p>Ready for your 🥰birthday🤗 surprise?</p>
+                <div class="progress-bar"><div class="progress"></div></div>
+                <button class="btn-primary" onclick="nextScreen(2)">Open Surprise ✨</button>
+            </div>
+        </div>
+
+        <div id="screen2" class="screen">
+            <div class="card glass">
+                <img src="https://media.tenor.com/2863690623136204031/tenor.gif" class="character">
+                <img src="pic3.jpeg" class="cake-thumb tilt-move">
+                <h3>A Cutiepie was born today!</h3>
+                <p>Yes, it's YOU!</p>
+                <button class="btn-primary" onclick="nextScreen(3)">Continue →</button>
+            </div>
+        </div>
+
+        <div id="screen3" class="screen">
+            <div class="card glass">
+                <div class="cake-container">
+                    <div id="candle" class="candle hidden">
+                        <div class="flame hidden"></div>
+                    </div>
+                    <img id="cake-img" src="https://cdn-icons-png.flaticon.com/512/2682/2682340.png" class="cake">
+                </div>
+                <h2 id="cake-status">For the Birthday Star!</h2>
+                <button id="cake-action-btn" class="btn-primary" onclick="handleCake()">Decorate Cake</button>
+            </div>
+        </div>
+
+        <div class="bg-elements"></div>
+
+        <div id="screen4" class="screen">
+            <div class="card glass">
+                <h3>Pop all 4 balloons</h3>
+                <div class="balloon-container">
+                    <div class="balloon" onclick="pop(this)">🎈</div>
+                    <div class="balloon" onclick="pop(this)">🎈</div>
+                    <div class="balloon" onclick="pop(this)">🎈</div>
+                    <div class="balloon" onclick="pop(this)">🎈</div>
+                </div>
+                <div id="balloon-msg" class="msg-box"></div>
+                <img id="bacha-pic" src="pic5.jpg" class="hidden cake-thumb pulse" style="margin-top:10px;">
+                <button id="ball-next" class="hidden btn-primary" onclick="nextScreen(5)">Next →</button>
+            </div>
+        </div>
+
+        <div id="screen5" class="screen">
+            <div class="card glass">
+                <h3>Some Sweet Moments</h3>
+                <div class="photo-frame pulse">
+                    <img src="pic4.jpeg" class="main-photo">
+                </div>
+                <button class="btn-primary" onclick="nextScreen(6)">Open My Message</button>
+            </div>
+        </div>
+
+        <div id="screen6" class="screen">
+            <div class="card final-card glass">
+                <div class="scroll-text">
+                    <p>Happy Birthday, Cutiepie! You deserve all the happiness in the world... sorry for everything. Today only i m giving this to nandu, I don't know i will stay till ur birthday or not. Today u teach me finance i got too hurt, really i felt to bad, its my mistake only sorry. If i stop talking to u in future, means i only did something too bad, in regret only may i wont talk and no eye contact also and don't take this as ignorance, i know that time also i will bother for u same as now u fine or don't like this ,etc. Its doesn't mean we r enemy .if u want any help just text me. today i will give this QR to nandu, if im talking to u till ur birthday means i will make other . else nandu will give u on 31st Jan. But today morning i will give him... Sorry for everything. i never thought to hurt or make u sad..</p>
+                </div>
+                <button class="btn-primary" onclick="location.reload()">Replay ↻</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
